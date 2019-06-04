@@ -33,7 +33,7 @@ _mac-$(1)_CXXFLAGS= \
 	$$(mac-$(1)_SYSROOT) \
 	-arch $(2)
 
-_mac-$(1)_CPPFLAGS=
+_mac-$(1)_CPPFLAGS= -DOBJC_OLD_DISPATCH_PROTOTYPES=1
 
 _mac-$(1)_LDFLAGS= \
 	-Wl,-no_weak_imports
