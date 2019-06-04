@@ -238,7 +238,7 @@ _ios-$(1)_CFLAGS= \
 	-Wl,-application_extension
 
 _ios-$(1)_CPPFLAGS= \
-	-DMONOTOUCH=1 \
+	-DMONOTOUCH=1 -DOBJC_OLD_DISPATCH_PROTOTYPES=1 \
 	$$(ios-$(1)_SYSROOT) \
 	-arch $(3) \
 	-Wl,-application_extension
@@ -352,7 +352,7 @@ _ios-$(1)_CXXFLAGS= \
 	-stdlib=libc++
 
 _ios-$(1)_CPPFLAGS= \
-	-DMONOTOUCH=1
+	-DMONOTOUCH=1 -DOBJC_OLD_DISPATCH_PROTOTYPES=1
 
 _ios-$(1)_LDFLAGS= \
 	-stdlib=libc++
