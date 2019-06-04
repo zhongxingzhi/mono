@@ -9,6 +9,9 @@
  */
 
 #if defined(__MACH__)
+
+#define OBJC_OLD_DISPATCH_PROTOTYPES 1
+
 #include "config.h"
 #include <glib.h>
 #include <stdio.h>

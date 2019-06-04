@@ -78,7 +78,7 @@ _ios-$(1)_CPPFLAGS= \
 	-DMONOTOUCH=1 \
 	$$(ios-$(1)_SYSROOT) \
 	-arch $(3) \
-	-DSMALL_CONFIG -D_XOPEN_SOURCE -DHOST_IOS -DHAVE_LARGE_FILE_SUPPORT=1 -DOBJC_OLD_DISPATCH_PROTOTYPES=1 \
+	-DSMALL_CONFIG -D_XOPEN_SOURCE -DHOST_IOS -DHAVE_LARGE_FILE_SUPPORT=1 \
 
 _ios-$(1)_LDFLAGS= \
 	-Wl,-no_weak_imports \
@@ -238,7 +238,7 @@ _ios-$(1)_CFLAGS= \
 	-Wl,-application_extension
 
 _ios-$(1)_CPPFLAGS= \
-	-DMONOTOUCH=1 -DOBJC_OLD_DISPATCH_PROTOTYPES=1 \
+	-DMONOTOUCH=1 \
 	$$(ios-$(1)_SYSROOT) \
 	-arch $(3) \
 	-Wl,-application_extension
@@ -352,7 +352,7 @@ _ios-$(1)_CXXFLAGS= \
 	-stdlib=libc++
 
 _ios-$(1)_CPPFLAGS= \
-	-DMONOTOUCH=1 -DOBJC_OLD_DISPATCH_PROTOTYPES=1
+	-DMONOTOUCH=1
 
 _ios-$(1)_LDFLAGS= \
 	-stdlib=libc++
