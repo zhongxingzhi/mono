@@ -45,6 +45,7 @@ _mac-$(1)_CONFIGURE_FLAGS= \
 	--disable-mcs-build \
 	--disable-nls \
 	--enable-maintainer-mode \
+	--enabled-checked-build=all \
 	--with-glib=embedded \
 	--with-mcs-docs=no
 
