@@ -37,7 +37,7 @@ node (isPr ? "mono-package-pr" : "mono-package-highsierra") {
                     timeout (time: 420, unit: 'MINUTES') {
                         withEnv (["MONO_BRANCH=${isPr ? '' : monoBranch}", "MONO_BUILD_REVISION=${commitHash}"]) {
                             sshagent (credentials: ['mono-extensions-ssh']) {
-                                sh "external/bockbuild/bb MacSDKRelease --arch darwin-universal --verbose --package ${isReleaseJob ? '--release' : ''}"
+                                sh "external/bockbuild/bb MacSDKRelease --arch darwin-universal --verbose --package --arch=darwin-64 ${isReleaseJob ? '--release' : ''}"
                             }
                         }
                     }
