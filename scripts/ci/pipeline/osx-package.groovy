@@ -11,7 +11,7 @@ def utils = null
 // compression is incompatible with JEP-210 right now
 properties([ /* compressBuildLog() */ ])
 
-node (isPr ? "mono-package-pr" : "mono-package") {
+node (isPr ? "mono-package-pr" : "mono-package-highsierra") {
     ws ("workspace/${jobName}/${monoBranch}") {
         timestamps {
             stage('Checkout') {
