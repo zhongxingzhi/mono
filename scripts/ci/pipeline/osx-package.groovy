@@ -100,5 +100,5 @@ if (!isPr || isWindowsPrBuild) {
     }
 
     // trigger the Windows build
-    build(job: "${windowsJobName}", wait: false, parameters: parameters)
+    //build(job: "${windowsJobName}", wait: false, parameters: parameters)
 }
